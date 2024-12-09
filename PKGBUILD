@@ -14,7 +14,7 @@ md5sums=('2bab22c5bc3a5b887e7c03d6dbfe59d7')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  make linux
+  make linux CFLAGS="-fcommon"
 }
 
 package() {
